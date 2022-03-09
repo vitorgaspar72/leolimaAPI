@@ -57,7 +57,13 @@ public class UsuarioController {
 				Usuario usuario = new Usuario();
 				usuariosModel.add(usuario);
 			}
+			if(usuarios.get(i).getIdusuario() != null && service.verificarUsuarioExistente(usuarios.get(i).getIdusuario())) {
+				return ResponseEntity.status(HttpStatus.CONFLICT).body("Usuário já existente!");
+			}
 			
+	        if(!perfil.isPresent()) {
+	        	return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Perfil não encontrado.");
+	        }
 			
 			BeanUtils.copyProperties(usuarios.get(i), usuariosModel.get(i));
 			usuariosModel.get(i).setPerfil(perfil.get());
