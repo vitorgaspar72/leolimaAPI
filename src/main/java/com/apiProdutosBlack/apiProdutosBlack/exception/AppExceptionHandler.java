@@ -33,6 +33,7 @@ public class AppExceptionHandler extends ResponseEntityExceptionHandler{
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
 		ErrorMessage erro = new ErrorMessage();
 		erro.setMessage("O método usado '"+ex.getMethod()+"' não é suportado para esta operação, verifique novamente!");
+		erro.setCurrentDate(new Date());
 		return new ResponseEntity<>(erro, new HttpHeaders(),status);
 	}
 
@@ -41,6 +42,7 @@ public class AppExceptionHandler extends ResponseEntityExceptionHandler{
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
 		ErrorMessage erro = new ErrorMessage();
 		erro.setMessage("Tipo de midia "+ex.getContentType()+" não aceita, utilize JSON");
+		erro.setCurrentDate(new Date());
 		return new ResponseEntity<>(erro, new HttpHeaders(),status);
 	}
 
@@ -49,6 +51,7 @@ public class AppExceptionHandler extends ResponseEntityExceptionHandler{
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
 		ErrorMessage erro = new ErrorMessage();
 		erro.setMessage("Tipo de midia não suportada, utilize essa lista de opções: "+ex.getSupportedMediaTypes());
+		erro.setCurrentDate(new Date());
 		return new ResponseEntity<>(erro, new HttpHeaders(),status);
 	}
 
@@ -64,6 +67,7 @@ public class AppExceptionHandler extends ResponseEntityExceptionHandler{
 			HttpHeaders headers, HttpStatus status, WebRequest webRequest) {
 		ErrorMessage erro = new ErrorMessage();
 		erro.setMessage("Tempo expirado de requisição, verifique o servidor.");
+		erro.setCurrentDate(new Date());
 		return new ResponseEntity<>(erro, new HttpHeaders(),status);
 	}
 	
