@@ -1,6 +1,7 @@
 package com.apiProdutosBlack.apiProdutosBlack.models;
 
 
+import java.sql.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -13,8 +14,13 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
 
 
+@SuppressWarnings("unused")
+@Getter
+@Setter
 @Entity
 @Table(name="menu")
 public class Menu {
@@ -40,53 +46,6 @@ public class Menu {
 	inverseJoinColumns= @JoinColumn(name="idmenu")) // a primeira chave vem invertida
 	private List<Perfil> perfis;
 
-	public Integer getIdmenu() {
-		return idmenu;
-	}
-
-	public void setIdmenu(Integer idmenu) {
-		this.idmenu = idmenu;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getLink() {
-		return link;
-	}
-
-	public void setLink(String link) {
-		this.link = link;
-	}
-
-	public String getIcone() {
-		return icone;
-	}
-
-	public void setIcone(String icone) {
-		this.icone = icone;
-	}
-
-	public Integer getExibir() {
-		return exibir;
-	}
-
-	public void setExibir(Integer exibir) {
-		this.exibir = exibir;
-	}
-
-	public List<Perfil> getPerfis() {
-		return perfis;
-	}
-
-	public void setPerfis(List<Perfil> perfis) {
-		this.perfis = perfis;
-	}
 	
 	
 }

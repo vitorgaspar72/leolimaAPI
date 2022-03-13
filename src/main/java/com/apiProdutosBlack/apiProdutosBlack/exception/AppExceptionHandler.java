@@ -5,6 +5,7 @@ import java.util.Date;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -60,6 +61,17 @@ public class AppExceptionHandler extends ResponseEntityExceptionHandler{
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
 		// TODO Auto-generated method stub
 		return super.handleMissingServletRequestParameter(ex, headers, status, request);
+	}
+	
+	
+
+	@Override
+	protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex,
+			HttpHeaders headers, HttpStatus status, WebRequest request) {
+		ErrorMessage erro = new ErrorMessage();
+		erro.setMessage("Causa: "+ex.getCause());
+		erro.setCurrentDate(new Date());
+		return new ResponseEntity<>(erro, new HttpHeaders(),status);
 	}
 
 	@Override

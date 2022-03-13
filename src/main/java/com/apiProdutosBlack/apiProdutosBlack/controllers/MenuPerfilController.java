@@ -108,7 +108,7 @@ public class MenuPerfilController {
 	       
 	        
 	        
-	        menuperfil.get().setIdMenuPerfil(idmenuperfil);
+	        menuperfil.get().setIdmenuperfil(idmenuperfil);
 	        menuperfil.get().setMenu(menuservice.verificarMenu(menuperfilDTO.getIdMenu()).get());
 			menuperfil.get().setPerfil(perfilservice.buscarPerfil(menuperfilDTO.getIdPerfil()).get());
 			

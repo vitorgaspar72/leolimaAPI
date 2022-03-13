@@ -18,10 +18,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
 
 
-
-
+@Getter
+@Setter
 @Entity
 @Table(name="usuario")
 public class Usuario implements Serializable{
@@ -69,94 +71,6 @@ public class Usuario implements Serializable{
 	private List<Agendamento> agendamentos;
 	
 	
-	public Integer getIdusuario() {
-		return idusuario;
-	}
-
-	public void setIdusuario(Integer idusuario) {
-		this.idusuario = idusuario;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-
-	public Integer getStatus() {
-		return status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-	public Perfil getPerfil() {
-		return perfil;
-	}
-
-	public void setPerfil(Perfil perfil) {
-		this.perfil = perfil;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-
-	public String getTelefone() {
-		return telefone;
-	}
-
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
-
-	public Date getDatanascimento() {
-		return datanascimento;
-	}
-
-	public void setDatanascimento(Date datanascimento) {
-		this.datanascimento = datanascimento;
-	}
-
-
-	public List<Agendamento> getAgendamentos() {
-		return agendamentos;
-	}
-
-	public void setAgendamentos(List<Agendamento> agendamentos) {
-		this.agendamentos = agendamentos;
-	}
 
 	
 	

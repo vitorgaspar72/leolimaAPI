@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -29,6 +28,7 @@ import com.apiProdutosBlack.apiProdutosBlack.dtos.AgendamentoDTO;
 import com.apiProdutosBlack.apiProdutosBlack.models.Agendamento;
 import com.apiProdutosBlack.apiProdutosBlack.services.AgendamentoService;
 import com.apiProdutosBlack.apiProdutosBlack.services.UsuarioService;
+
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -55,7 +55,8 @@ public class AgendamentoController {
 			agendamento.setValortotal(agendamentoDTO.getValortotal());
 			agendamento.setUsuario(uservice.buscarUsuario(agendamentoDTO.getIdusuario()).get());
 			service.salvar(agendamento);
-				
+			
+	        
 	
 			
 		

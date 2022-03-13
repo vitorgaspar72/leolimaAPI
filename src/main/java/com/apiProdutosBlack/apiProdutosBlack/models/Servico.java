@@ -1,5 +1,6 @@
 package com.apiProdutosBlack.apiProdutosBlack.models;
 
+import java.sql.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -12,6 +13,12 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@SuppressWarnings("unused")
+@Getter
+@Setter
 @Entity
 @Table(name="servico")
 public class Servico {
@@ -36,53 +43,6 @@ public class Servico {
 	inverseJoinColumns = @JoinColumn(name="idservico"))
 	private List<Agendamento> agendamentos;
 
-	public int getIdservico() {
-		return idservico;
-	}
-
-	public void setIdservico(int idservico) {
-		this.idservico = idservico;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
-	public Double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(Double preco) {
-		this.preco = preco;
-	}
-
-	public int getDuracao() {
-		return duracao;
-	}
-
-	public void setDuracao(int duracao) {
-		this.duracao = duracao;
-	}
-
-	public List<Agendamento> getAgendamentos() {
-		return agendamentos;
-	}
-
-	public void setAgendamentos(List<Agendamento> agendamentos) {
-		this.agendamentos = agendamentos;
-	}
 	
 	
 }

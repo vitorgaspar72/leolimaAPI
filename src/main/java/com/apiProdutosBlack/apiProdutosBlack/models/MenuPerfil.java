@@ -1,6 +1,9 @@
 package com.apiProdutosBlack.apiProdutosBlack.models;
 
 
+import java.sql.Date;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -10,8 +13,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
 
 
+@SuppressWarnings("unused")
+@Getter
+@Setter
 @Entity
 @Table(name="menu_perfil")
 public class MenuPerfil {
@@ -27,28 +35,6 @@ public class MenuPerfil {
 	@JoinColumn(name="idperfil")
 	private Perfil perfil;
 
-	public Integer getIdMenuPerfil() {
-		return idmenuperfil;
-	}
-
-	public void setIdMenuPerfil(Integer idMenuPerfil) {
-		this.idmenuperfil = idMenuPerfil;
-	}
-
-	public Menu getMenu() {
-		return menu;
-	}
-
-	public void setMenu(Menu menu) {
-		this.menu = menu;
-	}
-
-	public Perfil getPerfil() {
-		return perfil;
-	}
-
-	public void setPerfil(Perfil perfil) {
-		this.perfil = perfil;
-	}
+	
 	
 }

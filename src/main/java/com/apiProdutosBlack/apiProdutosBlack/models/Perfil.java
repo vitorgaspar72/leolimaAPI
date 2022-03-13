@@ -16,6 +16,11 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @Entity
 @Table(name="perfil")
 public class Perfil implements Serializable{
@@ -42,50 +47,6 @@ public class Perfil implements Serializable{
 	inverseJoinColumns= @JoinColumn(name="idmenu"))
 	private List<Menu> menus;
 
-	public Integer getIdperfil() {
-		return idperfil;
-	}
-
-	public void setIdperfil(Integer idperfil) {
-		this.idperfil = idperfil;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public Date getDatacadastro() {
-		return datacadastro;
-	}
-
-	public void setDatacadastro(Date datacadastro) {
-		this.datacadastro = datacadastro;
-	}
-
-
-	public List<Menu> getMenus() {
-		return null;
-	}
-
-	public void setMenus(List<Menu> menus) {
-		this.menus = menus;
-	}
-
-	public List<Usuario> getUsuarios() {
-		return usuarios;
-	}
-
-	public void setUsuarios(List<Usuario> usuarios) {
-		this.usuarios = usuarios;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 	
 	
 	

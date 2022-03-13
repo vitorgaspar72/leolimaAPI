@@ -1,6 +1,8 @@
 package com.apiProdutosBlack.apiProdutosBlack.models;
 
+import java.sql.Date;
 import java.sql.Time;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,8 +14,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
 
 
+@SuppressWarnings("unused")
+@Getter
+@Setter
 @Entity
 @Table(name="agendamento_servico")
 public class AgendamentoServico {
@@ -41,65 +48,6 @@ public class AgendamentoServico {
 	@JoinColumn(name="idatendente")
 	private Usuario atendente;
 
-
-	public Integer getIdagendamentoservico() {
-		return idagendamentoservico;
-	}
-
-
-	public void setIdagendamentoservico(Integer idagendamentoservico) {
-		this.idagendamentoservico = idagendamentoservico;
-	}
-
-
-	public Servico getServico() {
-		return servico;
-	}
-
-
-	public void setServico(Servico servico) {
-		this.servico = servico;
-	}
-
-
-	public Agendamento getAgendamento() {
-		return agendamento;
-	}
-
-
-	public void setAgendamento(Agendamento agendamento) {
-		this.agendamento = agendamento;
-	}
-
-
-	public Time getHorario() {
-		return horario;
-	}
-
-
-	public void setHorario(Time horario) {
-		this.horario = horario;
-	}
-
-
-	public Integer getStatus() {
-		return status;
-	}
-
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-
-	public Usuario getAtendente() {
-		return atendente;
-	}
-
-
-	public void setAtendente(Usuario atendente) {
-		this.atendente = atendente;
-	}
 
 	
 	
