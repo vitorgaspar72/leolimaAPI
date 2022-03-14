@@ -24,4 +24,4 @@ jobs:
       run: mvn -B package --file pom.xml
       
     - name: Execute Jar file
-      run: sudo java -jar /home/ubuntu/actions-runner/_work/leolimaAPI/leolimaAPI/target/apiProdutosBlack-0.0.1-SNAPSHOT.jar 
+      run: sudo java -jar /home/ubuntu/actions-runner/_work/leolimaAPI/leolimaAPI/target/*.jar 
