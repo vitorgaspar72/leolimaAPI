@@ -1,6 +1,5 @@
 package com.apiProdutosBlack.apiProdutosBlack.models;
 
-import java.sql.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -15,6 +14,7 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
+
 
 @SuppressWarnings("unused")
 @Getter

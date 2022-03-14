@@ -2,6 +2,13 @@ package com.apiProdutosBlack.apiProdutosBlack.dtos;
 
 import javax.validation.constraints.NotNull;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@AllArgsConstructor
+@Getter
+@Setter
 public class MenuPerfilDTO {
 	private Integer idmenuperfil;
 	
@@ -13,29 +20,4 @@ public class MenuPerfilDTO {
 	
 	
 
-	public Integer getIdmenuperfil() {
-		return idmenuperfil;
-	}
-
-	public void setIdmenuperfil(Integer idmenuperfil) {
-		this.idmenuperfil = idmenuperfil;
-	}
-
-	public Integer getIdMenu() {
-		return idMenu;
-	}
-
-	public void setIdMenu(Integer idMenu) {
-		this.idMenu = idMenu;
-	}
-
-	public Integer getIdPerfil() {
-		return idPerfil;
-	}
-
-	public void setIdPerfil(Integer idPerfil) {
-		this.idPerfil = idPerfil;
-	}
-	
-	
 }

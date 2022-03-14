@@ -5,10 +5,15 @@ package com.apiProdutosBlack.apiProdutosBlack.dtos;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 
 
-
+@AllArgsConstructor
+@Getter
+@Setter
 public class AgendamentoDTO {
 	
 	private Integer idagendamento;
@@ -25,45 +30,5 @@ public class AgendamentoDTO {
 	@NotNull(message = "Id do usuario não pode ser nulo") 
 	private Integer idusuario;
 
-	public Integer getIdagendamento() {
-		return idagendamento;
-	}
-
-	public void setIdagendamento(Integer idagendamento) {
-		this.idagendamento = idagendamento;
-	}
-
-	public String getDataagendamento() {
-		return dataagendamento;
-	}
-
-	public void setDataagendamento(String dataagendamento) {
-		this.dataagendamento = dataagendamento;
-	}
-
-	public Double getValortotal() {
-		return valortotal;
-	}
-
-	public void setValortotal(Double valortotal) {
-		this.valortotal = valortotal;
-	}
-
-	public Integer getStatus() {
-		return status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-	public Integer getIdusuario() {
-		return idusuario;
-	}
-
-	public void setIdusuario(Integer idusuario) {
-		this.idusuario = idusuario;
-	}
-	
 	
 }

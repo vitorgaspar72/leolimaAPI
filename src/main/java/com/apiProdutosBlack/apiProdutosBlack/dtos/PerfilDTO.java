@@ -1,12 +1,15 @@
 package com.apiProdutosBlack.apiProdutosBlack.dtos;
 
-
-
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
+@AllArgsConstructor
+@Getter
+@Setter
 public class PerfilDTO {
 	private Integer idperfil;
 	
@@ -16,31 +19,6 @@ public class PerfilDTO {
 	
 	@NotBlank
 	private String datacadastro;
-
-	public Integer getIdperfil() {
-		return idperfil;
-	}
-
-	public void setIdperfil(Integer idperfil) {
-		this.idperfil = idperfil;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getDatacadastro() {
-		return datacadastro;
-	}
-
-	public void setDatacadastro(String datacadastro) {
-		
-		this.datacadastro = datacadastro;
-	}
 	
 	
 }

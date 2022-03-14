@@ -6,9 +6,15 @@ import java.sql.Date;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 
 
+@AllArgsConstructor
+@Getter
+@Setter
 public class UsuarioDTO {
 	
 	
@@ -49,109 +55,5 @@ public class UsuarioDTO {
 	
 	
 
-	public Date getDatanascimento() {
-		return datanascimento;
-	}
-
-
-	public void setDatanascimento(Date datanascimento) {
-		this.datanascimento = datanascimento;
-	}
-
-
-
-	
-	public Integer getIdusuario() {
-		return idusuario;
-	}
-
-
-	public void setIdusuario(Integer idusuario) {
-		this.idusuario = idusuario;
-	}
-
-
-	public String getNome() {
-		return nome;
-	}
-
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-
-	public String getLogin() {
-		return login;
-	}
-
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-
-	public String getSenha() {
-		return senha;
-	}
-
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-
-
-	public Integer getStatus() {
-		return status;
-	}
-
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-
-	public Integer getIdperfil() {
-		return idperfil;
-	}
-
-
-	public void setIdperfil(Integer idperfil) {
-		this.idperfil = idperfil;
-	}
-
-
-	public String getCpf() {
-		return cpf;
-	}
-
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-
-
-	public String getTelefone() {
-		return telefone;
-	}
-
-
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
-
-	
-	
-	
 	
 }

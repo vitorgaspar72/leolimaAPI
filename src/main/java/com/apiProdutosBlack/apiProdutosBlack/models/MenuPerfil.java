@@ -1,9 +1,6 @@
 package com.apiProdutosBlack.apiProdutosBlack.models;
 
 
-import java.sql.Date;
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -17,7 +14,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@SuppressWarnings("unused")
+
 @Getter
 @Setter
 @Entity
