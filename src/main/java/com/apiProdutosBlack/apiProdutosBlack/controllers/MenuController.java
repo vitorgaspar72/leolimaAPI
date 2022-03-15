@@ -81,6 +81,13 @@ public class MenuController {
         
         return ResponseEntity.status(HttpStatus.OK).body(menuModelOptional.get());
     }
+	@GetMapping("/teste")
+	
+    public ResponseEntity<Object> getMenu(@AuthenticationPrincipal UserDetails userDetails){
+        
+        
+        return ResponseEntity.status(HttpStatus.OK).body("Testando");
+    }
 	
 	 @DeleteMapping("/{idmenu}")
 	 @PreAuthorize("hasRole('ROLE_ADMIN')")
