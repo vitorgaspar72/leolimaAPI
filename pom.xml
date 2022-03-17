@@ -8,10 +8,10 @@
 		<version>2.6.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.apiProdutosBlack</groupId>
-	<artifactId>apiProdutosBlack</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>apiProdutosBlack</name>
+	<groupId>com.apiLeoLima</groupId>
+	<artifactId>apiLeoLima</artifactId>
+	<version>apiLeoLima1.0</version>
+	<name>apiLeoLima</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>

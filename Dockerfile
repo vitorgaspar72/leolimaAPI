@@ -1,5 +1,5 @@
 FROM openjdk
 WORKDIR /app
 
-COPY target/apiProdutosBlack-0.0.1-SNAPSHOT.jar /app/apileolima.jar
+COPY target/apiLeoLima-apiLeoLima1.0.jar /app/apileolima.jar
 ENTRYPOINT ["java","-jar","apileolima.jar"]
